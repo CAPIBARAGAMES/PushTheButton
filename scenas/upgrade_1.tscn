@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://id33bhmec7xu"]
+
+[ext_resource type="Texture2D" uid="uid://bmral5wwd0rv0" path="res://icon.svg" id="1_83slk"]
+[ext_resource type="Script" path="res://scripts/upgrade_1.gd" id="1_td4gr"]
+
+[node name="upgrade_1" type="TouchScreenButton"]
+position = Vector2(10, 103)
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("1_83slk")
+script = ExtResource("1_td4gr")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
