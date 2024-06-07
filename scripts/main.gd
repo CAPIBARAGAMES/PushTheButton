@@ -21,6 +21,8 @@ var new_button6 = false
 #Aumenta el escore y llama funcion para actualizar
 func _on_push_button_pressed():
 	Global.score += Global.val_for_click
+	if Global.score >= 1000001:
+		Global.score = 1000000  
 	$slime.play("damage")
 	$espada.play()
 	if new_button1 == false:
@@ -36,16 +38,18 @@ func _on_push_button_pressed():
 	if new_button6 == false:
 		new_up_button6()
 	score_update()
-
 #Actualiza la label de score
 func score_update():
 	%score.text = "SLIME:" + str(Global.score)
+	if Global.score == 1000000:
+		%score.text = "Thanks 
+		for playing!" 
 
 
 
 #Aparece un nuevo bonton de mejora
 func new_up_button1():
-	if Global.score >= 50: 
+	if Global.score >= 10: 
 		var spawn_buton_1 = up_1.instantiate()
 		add_child(spawn_buton_1)
 		print("nuevo boton")
@@ -62,7 +66,7 @@ func new_up_button2():
 		Global.get_main_score()
 
 func new_up_button3():
-	if Global.score >= 800: 
+	if Global.score >= 1500: 
 		var spawn_buton_3 = up_3.instantiate()
 		add_child(spawn_buton_3)
 		print("nuevo boton")
@@ -71,7 +75,7 @@ func new_up_button3():
 
 
 func new_up_button4():
-	if Global.score >= 3200: 
+	if Global.score >= 5000: 
 		var spawn_buton_4 = up_4.instantiate()
 		add_child(spawn_buton_4)
 		print("nuevo boton")
@@ -79,7 +83,7 @@ func new_up_button4():
 		Global.get_main_score()
 
 func new_up_button5():
-	if Global.score >= 12800: 
+	if Global.score >= 20000: 
 		var spawn_buton_5 = up_5.instantiate()
 		add_child(spawn_buton_5)
 		print("nuevo boton")
@@ -87,7 +91,7 @@ func new_up_button5():
 		Global.get_main_score()
 
 func new_up_button6():
-	if Global.score >= 51200: 
+	if Global.score >= 50000: 
 		var spawn_buton_6 = up_6.instantiate()
 		add_child(spawn_buton_6)
 		print("nuevo boton")
@@ -95,3 +99,5 @@ func new_up_button6():
 		Global.get_main_score()
 
 #Aqui terminan todas las fucniones que se encargan de el spawn de todos los nodos de mejoras
+
+

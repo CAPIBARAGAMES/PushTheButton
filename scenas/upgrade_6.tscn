@@ -28,7 +28,7 @@ grow_vertical = 2
 scale = Vector2(0.1, 0.1)
 size_flags_horizontal = 4
 theme = ExtResource("4_1t26t")
-text = "+3125"
+text = "+5000"
 
 [node name="LabelUpgrade2" type="Label" parent="."]
 anchors_preset = 15
@@ -46,6 +46,6 @@ theme = ExtResource("4_1t26t")
 theme_override_colors/font_color = Color(0.0156863, 0.517647, 0.819608, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
-text = "$51200"
+text = "$50000"
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]
