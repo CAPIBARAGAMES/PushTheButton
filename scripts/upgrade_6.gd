@@ -7,6 +7,7 @@ func click_for_secon_upgrade6():
 	if Global.score >= Global.cost_upgrade_6:
 		Global.score -= Global.cost_upgrade_6
 		Global.val_for_click += Global.UPGRADE_6
+		$AudioStreamPlayer.play()
 		actualizarscore()
 
 func actualizarscore():

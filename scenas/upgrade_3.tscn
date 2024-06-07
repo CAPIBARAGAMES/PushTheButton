@@ -1,12 +1,51 @@
-[gd_scene load_steps=3 format=3 uid="uid://c0quc67my7cc6"]
+[gd_scene load_steps=5 format=3 uid="uid://c0quc67my7cc6"]
 
-[ext_resource type="Texture2D" uid="uid://bmral5wwd0rv0" path="res://icon.svg" id="1_2ubwm"]
+[ext_resource type="Texture2D" uid="uid://d3xu66any1jwr" path="res://assets/upgrades3.png" id="1_2j5ah"]
 [ext_resource type="Script" path="res://scripts/upgrade_3.gd" id="1_wcvdu"]
+[ext_resource type="AudioStream" uid="uid://qxuycm2djjwn" path="res://audio/01_chest_open_1.wav" id="3_d1mut"]
+[ext_resource type="Theme" uid="uid://td60q6m46vis" path="res://fonts/Tema fuentes.tres" id="4_3mdmm"]
 
 [node name="upgrade_3" type="TouchScreenButton"]
-position = Vector2(29, 217)
-scale = Vector2(0.5, 0.5)
-texture_normal = ExtResource("1_2ubwm")
+position = Vector2(260, 408)
+scale = Vector2(10, 10)
+texture_normal = ExtResource("1_2j5ah")
 script = ExtResource("1_wcvdu")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_d1mut")
+volume_db = -5.0
+
+[node name="LabelUpgrade1" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.4
+offset_top = 1.2
+offset_right = 26.4
+offset_bottom = 14.2
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.1, 0.1)
+size_flags_horizontal = 4
+theme = ExtResource("4_3mdmm")
+text = "+25"
+
+[node name="LabelUpgrade2" type="Label" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 4.0
+offset_right = 39.0
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.1, 0.1)
+size_flags_horizontal = 4
+theme = ExtResource("4_3mdmm")
+theme_override_colors/font_color = Color(0.0156863, 0.517647, 0.819608, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+text = "$800"
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

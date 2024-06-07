@@ -3,7 +3,7 @@ func _ready():
 	pass
 
 #Control
-var score: int = 0;
+var score: int = 51198;
 var val_for_click = 1;
 var max_score = 100
 
@@ -17,12 +17,12 @@ const UPGRADE_5: int = 625;
 const UPGRADE_6: int = 3125;
 
 #costo de mejoras
-var cost_upgrade_1: int = 10;
-var cost_upgrade_2: int = 40;
-var cost_upgrade_3: int = 160;
-var cost_upgrade_4: int = 640;
-var cost_upgrade_5: int = 2560;
-var cost_upgrade_6: int = 10240;
+var cost_upgrade_1: int = 50;
+var cost_upgrade_2: int = 200;
+var cost_upgrade_3: int = 800;
+var cost_upgrade_4: int = 3200;
+var cost_upgrade_5: int = 12800;
+var cost_upgrade_6: int = 51200;
 
 #control de upgrades
 var actualizacionupgrade = false
