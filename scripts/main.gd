@@ -21,6 +21,7 @@ var new_button6 = false
 #Aumenta el escore y llama funcion para actualizar
 func _on_push_button_pressed():
 	Global.score += Global.val_for_click
+	$slime.play("damage")
 	if new_button1 == false:
 		new_up_button1()
 	if new_button2 == false:
@@ -37,7 +38,7 @@ func _on_push_button_pressed():
 
 #Actualiza la label de score
 func score_update():
-	%score.text = "SCORE:" + str(Global.score)
+	%score.text = "SLIME:" + str(Global.score)
 
 
 

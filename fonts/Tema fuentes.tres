@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://td60q6m46vis"]
+
+[ext_resource type="FontFile" uid="uid://cplkxvh0mq26f" path="res://fonts/ChillPixels-Mono.otf" id="1_xwkkw"]
+
+[resource]
+default_font = ExtResource("1_xwkkw")

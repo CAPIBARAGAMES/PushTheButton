@@ -10,7 +10,7 @@ func click_for_secon_upgrade5():
 func actualizarscore():
 	var label_node = Global.get_main_score()
 	if label_node:
-		label_node.text = "SCORE:" + str (Global.score)
+		label_node.text = "SLIME:" + str (Global.score)
 
 
 func _on_pressed():
